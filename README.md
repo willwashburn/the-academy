@@ -9,3 +9,11 @@ Requirements
 - Requires latest WilliGant Resources
 - Requires PHPActiveRecord
 
+
+Apache VHOSTS Settings
+----------------------
+
+	----------------------
+	some vhosts settings here
+	----------------------
+
