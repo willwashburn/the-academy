@@ -1,0 +1,11 @@
+Team
+---------
+Will Washburn 	{ hello@willwashburn.com }
+-loves long walks on the beach
+
+Khaliq Gant 	{ hello@khaliqgant.com }
+-loves to code stories about butterflies
+
+Stack
+--------
+Built from The Academy, another PHP framework
