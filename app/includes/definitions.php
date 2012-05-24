@@ -8,5 +8,5 @@
 	 */
 
 	include 'definitions/define.environment.php';
-
-    include 'definitions/define.site.php';
+    include 'definitions/define.domains.php';
+	include 'definitions/define.database_&_resources.php';

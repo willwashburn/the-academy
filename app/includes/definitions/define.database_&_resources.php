@@ -8,7 +8,6 @@
 
 	switch (__ENVIRONMENT) {
 		case 'production':
-
 			$database = $databases['production'];
 			$resources_path = $resources_paths['production'];
 			break;

@@ -9,7 +9,7 @@
 	 */
 
 	include '../path_finder.php';
-	include __V_PATH.'/app/includes/all_config.php';
+	include __V_PATH . '/app/includes/config.php';
 
 
 	header('location:http://');
