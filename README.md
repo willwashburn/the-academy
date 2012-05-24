@@ -57,13 +57,8 @@ Apache VHOSTS Settings
 
 List of defined constants
 ----------------------
-_Paths_
 - __V_PATH -> the root path
-
-_Domains_
-- __BASE_DOMAIN -> eg "willigant.com" or "wdev.willigant.com"
-- __DOMAIN_PREFIX -> eg "wdev"
-
-_Misc_
-- __ENVIRONMENT -> dev or production
+* __BASE_DOMAIN -> eg "willigant.com" or "wdev.willigant.com"
+* __DOMAIN_PREFIX -> eg "wdev"
+* __ENVIRONMENT -> dev or production
 
