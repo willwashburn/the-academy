@@ -12,16 +12,15 @@
 	 *
 	 */
 
-	$base_domain   = 'willigant.com';
+	$base_domain   = 'partypact.com';
+
 	$dev_prefixes  = array('wdev', 'kdev');
 	$static_prefix = 'static';
 
 	$cdn_domain = 'cdn.willigant.com';
 
 	$subdomains = array(
-		'default'=> array('', 'www'),
-		'member'=> array('members', 'member'),
-		'admin' => array('admin'),
+		'www'=> array('', 'www'),
 		'mobile'=> array('m', 'touch')
 	);
 
