@@ -8,3 +8,5 @@
 	 */
 
 	include 'definitions/define.environment.php';
+
+    include 'definitions/define.site.php';

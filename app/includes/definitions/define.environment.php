@@ -26,6 +26,5 @@
 		}
 	}
 
-	define('__BASE_DOMAIN',$base_domain);
 	define('__DOMAIN_PREFIX', $domain_prefix);
 	define('__ENVIRONMENT', $environment);

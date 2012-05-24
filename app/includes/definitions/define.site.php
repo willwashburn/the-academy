@@ -6,11 +6,9 @@
 	 *
 	 */
 
+	$static_domain = $static_prefix . '.' . $base_domain;
 
-	$public_domain = __DOMAIN_PREFIX . '.' . $base_domain;
-	$static_domain = $static_domain . '.' . $public_domain;
-
-	$subdomain_position = strpos($_SERVER['HTTP_HOST'], $public_domain);
+	$subdomain_position = strpos($_SERVER['HTTP_HOST'], $base_domain);
 	if ($subdomain_position != 0) {
 		$subdomain_position--;
 	}
@@ -37,7 +35,7 @@
 
 	define('__STATIC_DOMAIN', $static_domain);
 	define('__IMAGE_DOMAIN', $static_domain . '/images/');
-	define('__JS_DOMAIN', $static_domain . '/javascripts/');
+	define('__JS_DOMAIN', $static_domain . '/js/');
 	define('__CSS_DOMAIN', $static_domain . '/css/');
 	define('__VIDEO_DOMAIN', $static_domain . '/video/');
 
@@ -45,11 +43,9 @@
 	foreach ($subdomains as $title => $subdomain_array) {
 
 		$constant = '__' . strtoupper($title) . '_DOMAIN';
-		if ($title != 'public') {
-			$domain = $subdomain_array[0] . '.' . $public_domain;
-		} else {
-			$domain = $public_domain;
-		}
+        if ($subdomain_array[0] === '') { $use = 1;} else { $use = 0; }
+			$domain = $subdomain_array[$use] . '.' . $base_domain;
+			#$domain = $base_domain;
 		define($constant, $domain);
 
 	}

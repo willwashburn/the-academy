@@ -60,5 +60,13 @@ List of defined constants
 - __V_PATH -> the root path
 * __BASE_DOMAIN -> eg "willigant.com" or "wdev.willigant.com"
 * __DOMAIN_PREFIX -> eg "wdev"
+- __SITE
+- __CND_DOMAIN
+- __STATIC_DOMAIN
+- __IMAGE_DOMAIN
+- __JS_DOMAIN
+- __CSS_DOMAIN
+- __VIDEO_DOMAIN
+- __(each subdomain)_DOMAIN
 * __ENVIRONMENT -> dev or production
 
