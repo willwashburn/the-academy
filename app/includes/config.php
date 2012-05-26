@@ -5,7 +5,7 @@
 	 *
 	 */
 
-	$config_path = __V_PATH . 'app/_etc/config/';
+	$config_path = __V_PATH . 'app/etc/config/';
 
 	if ($handle = opendir($config_path)) {
 		while (FALSE !== ($file = readdir($handle))) {
