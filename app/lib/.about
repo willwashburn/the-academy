@@ -1,1 +1,22 @@
-this is where submodule git repos go
+To add a submodule
+==================
+git submodule add git@github.com:username/gitrepo.git app/lib/gitrepo
+
+To make sure submodules are init'd
+--------------------------------
+git submodule init
+git submodule update
+
+
+
+
+To update submodules
+=====================
+go to directory
+	cd app/lib/gitrepo
+checkout master branch (or really whatever branch you want)
+	git checkout master
+Update repo
+	git pull
+go to root and update master repo
+	git

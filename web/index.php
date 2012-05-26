@@ -13,3 +13,16 @@
 	include __V_PATH .'/app/includes/definitions.php';
 
 	include __APP_PATH.'includes/subdomain_check.php';
+
+	//Settings for each site
+	switch (__SITE) {
+		case 'member':
+		case 'mobile':
+			include __APP_PATH . '/includes/start_session.cross_domain.php';
+			break;
+		default:
+			//no session
+			break;
+	}
+
+	include __APP_PATH . '/includes/init.php';

@@ -1,0 +1,3 @@
+[submodule "app/lib/lessphp"]
+	path = app/lib/lessphp
+	url = git@github.com:willwashburn/lessphp.git
