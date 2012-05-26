@@ -10,3 +10,5 @@
 	include 'definitions/define.environment.php';
     include 'definitions/define.domains.php';
 	include 'definitions/define.database_&_resources.php';
+	include 'definitions/define.paths.php';
+	include 'definitions/define.version.php';

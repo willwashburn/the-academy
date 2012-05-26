@@ -15,8 +15,6 @@
 	$version['minor']     = 0;
 	$version['database']  = 001;
 
-	$version['resources'] = 2.21;
-
 	//Wdev Version
 	$version['wdev'] = 001;
 

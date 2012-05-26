@@ -11,3 +11,5 @@
 
 	include __V_PATH . '/app/includes/config.php';
 	include __V_PATH .'/app/includes/definitions.php';
+
+	include __APP_PATH.'includes/subdomain_check.php';
