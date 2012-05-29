@@ -3,3 +3,6 @@
 	path = app/lib/php/lessphp
 	url = git@github.com:willwashburn/lessphp.git
 
+[submodule "app/lib/php/common-library"]
+	path = app/lib/php/common-library
+	url = git@bitbucket.org:willwashburn/common-library.git
