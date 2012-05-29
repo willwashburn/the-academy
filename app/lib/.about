@@ -7,9 +7,6 @@ To make sure submodules are init'd
 git submodule init
 git submodule update
 
-
-
-
 To update submodules
 =====================
 go to directory
@@ -20,3 +17,10 @@ Update repo
 	git pull
 go to root and update master repo
 	git
+
+To remove a submodule you need to:
+====================================
+1 Delete the relevant section from the .gitmodules file.
+2 Delete the relevant section from .git/config.
+3 Run git rm --cached path_to_submodule (no trailing slash).
+4 Commit and delete the now untracked submodule files.
