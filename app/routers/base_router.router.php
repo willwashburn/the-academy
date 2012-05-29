@@ -13,7 +13,7 @@
 		function __construct($registry)
 		{
 			$this->registry      = $registry;
-			$this->registry->uri = uri::getInstance();
+			$this->registry->uri = \commonlib\uri::getInstance();
 		}
 
 		/*
