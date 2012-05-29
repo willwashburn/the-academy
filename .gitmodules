@@ -6,3 +6,6 @@
 [submodule "app/lib/php/common-library"]
 	path = app/lib/php/common-library
 	url = git@bitbucket.org:willwashburn/common-library.git
+[submodule "app/lib/php/php-activerecord"]
+	path = app/lib/php/php-activerecord
+	url = git@github.com:willwashburn/php-activerecord.git
