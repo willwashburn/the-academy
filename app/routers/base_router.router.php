@@ -1,49 +1,53 @@
 <?php
 	/*
-		 * Router
-		 * @use tells us which controller to load
-		 * @oa  Will
-		 *
-		 */
+	 * Router
+	 * @use tells us which controller to load
+	 * @oa  Will
+	 *
+	 */
 	class baseRouter
 	{
-		protected  $registry, $path;
+		protected $registry, $path;
 		public $file, $controller, $action;
 
+		/*
+		 * Constructor
+		 * @use gets URI instance adds to registrty
+		 * @oa	Will
+		 *
+		 */
 		function __construct($registry)
 		{
 			$this->registry      = $registry;
-			$this->registry->uri = \commonlib\uri::getInstance();
+			$this->registry->uri = \commonlib\uri::get_instance();
 		}
 
 		/*
-				 * Set Controller Path
-				 * @use controller directory path
-				 * @oa      SevinKevins
-				 * @edited  Will
-				 *
-				 */
-		function setPath($path)
+		 * Set Controller Path
+		 * @use controller directory path
+		 * @oa      SevinKevins
+		 * @edited  Will
+		 *
+		 */
+		function set_path($path)
 		{
-			if (is_dir($path) == false) {
+			if (is_dir($path) == FALSE) {
 				throw new Exception ('Invalid controller path: `' . $path . '`');
 			}
-
 			$this->path = $path;
 		}
 
 		/*
-				 * Load the Controller
-				 * @use loads whatever controller we are supposed to load
-				 * @oa  Will
-				 *
-				 */
-
+		 * Load the Controller
+		 * @use loads whatever controller we are supposed to load
+		 * @oa  Will
+		 *
+		 */
 		public function loader()
 		{
-			$this->getController();
+			$this->get_controller();
 
-			if (is_readable($this->file) == false) {
+			if (is_readable($this->file) == FALSE) {
 				$this->file       = $this->path . '/error.controller.php';
 				$this->controller = 'error';
 			}
@@ -53,15 +57,14 @@
 			$this->registry->controller = $this->controller;
 			$this->registry->action     = $this->action;
 
-			$class                      = $this->controller . 'Controller';
+			$class      = $this->controller . 'Controller';
 			$controller = new $class($this->registry);
 
 			/*** check if the action is callable ***/
-			if (is_callable(array($controller, $this->action)) == false) {
+			if (is_callable(array($controller, $this->action)) == FALSE) {
 				$action = 'index';
 			}
-			else
-			{
+			else {
 				$action = $this->action;
 			}
 
@@ -70,13 +73,13 @@
 		}
 
 		/*
-				 * Get Controller
-				 * @use figure out the controller/action via the URI
-				 * @oa      SevinKevins
-				 * @edited  Will
-				 *
-				 */
-		private function getController()
+		 * Get Controller
+		 * @use figure out the controller/action via the URI
+		 * @oa      SevinKevins
+		 * @edited  Will
+		 *
+		 */
+		private function get_controller()
 		{
 
 			if ($this->registry->uri->fragment(1)) {
@@ -94,8 +97,6 @@
 			if (empty($this->action)) {
 				$this->action = 'index';
 			}
-
-			$this->registry->javascript_document_name = $this->controller . '.' . $this->action;
 
 			$this->file = $this->path . '/' . $this->controller . '.controller.php';
 

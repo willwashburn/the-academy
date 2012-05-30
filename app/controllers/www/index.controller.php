@@ -1,19 +1,22 @@
 <?php
 	/*
-		 * Index Controller
-		 * @use home page
-		 * @oa  Will
-		 *
-		 * Created on: 4/17/12 @ 9:01 PM
-		 */
+	 * Index Controller
+	 * @use home page
+	 * @oa  Will
+	 *
+	 * Created on: 4/17/12 @ 9:01 PM
+	 *
+	 */
 
-	class indexController extends baseController
+	namespace wwwSite;
+
+	class indexController extends \baseController
 	{
 		/*
-				 * Landing Page
-				 * @oa  Will
-				 *
-				 */
+		 * Landing Page
+		 * @oa  Will
+		 *
+		 */
 		public function index()
 		{
 			$t             = $this->registry->template;
