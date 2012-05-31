@@ -7,6 +7,4 @@
 	 *
 	 */
 
-
-
-echo __SITE;
+	include __APP_PATH. 'includes/autoloaders.php';
