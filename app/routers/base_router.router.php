@@ -7,7 +7,7 @@
 	 */
 	class baseRouter
 	{
-		protected $registry, $path;
+		protected $registry, $path, $use_namespace;
 		public $file, $controller, $action;
 
 		/*
@@ -16,11 +16,11 @@
 		 * @oa	Will
 		 *
 		 */
-		function __construct($registry,$config)
+		function __construct($registry, $config)
 		{
 			$this->registry      = $registry;
 			$this->registry->uri = \commonlib\uri::get_instance();
-
+			$this->use_namespace = TRUE;
 
 
 		}
@@ -60,16 +60,15 @@
 			$this->registry->controller = $this->controller;
 			$this->registry->action     = $this->action;
 
-			$namespace = __SITE.'SITE';
+			if ($this->use_namespace) { $namespace = __SITE . 'SITE'; } else { $namespace = 'academy'; }
 
-			$class      = $namespace.'\\'.$this->controller . 'Controller';
+			$class      = $namespace . '\\' . $this->controller . 'Controller';
 			$controller = new $class($this->registry);
 
 			/*** check if the action is callable ***/
 			if (is_callable(array($controller, $this->action)) == FALSE) {
 				$action = 'index';
-			}
-			else {
+			} else {
 				$action = $this->action;
 			}
 
@@ -86,24 +85,29 @@
 		 */
 		private function get_controller()
 		{
+			if ($this->registry->uri->fragment(1) === __DYNAMIC_EXTERNAL_URL) {
 
-			if ($this->registry->uri->fragment(1)) {
-				$this->controller = $this->registry->uri->fragment(1);
+				$this->controller = 'dynamic_sheets';
+				$this->file = __APP_PATH.'controllers/external_sheet.controller.php';
+				$this->use_namespace = FALSE;
 
+			} else {
+				if ($this->registry->uri->fragment(1)) {
+					$this->controller = $this->registry->uri->fragment(1);
+				}
+				if ($this->registry->uri->fragment(2)) {
+					$this->action = $this->registry->uri->fragment(2);
+				}
+
+				if (empty($this->controller)) {
+					$this->controller = 'index';
+				}
+
+				if (empty($this->action)) {
+					$this->action = 'index';
+				}
+
+				$this->file = $this->path . '/' . $this->controller . '.controller.php';
 			}
-			if ($this->registry->uri->fragment(2)) {
-				$this->action = $this->registry->uri->fragment(2);
-			}
-
-			if (empty($this->controller)) {
-				$this->controller = 'index';
-			}
-
-			if (empty($this->action)) {
-				$this->action = 'index';
-			}
-
-			$this->file = $this->path . '/' . $this->controller . '.controller.php';
-
 		}
 	}
