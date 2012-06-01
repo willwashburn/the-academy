@@ -59,13 +59,13 @@
 			$folder = $class_name_array[0];
 
 			if (!is_dir(__V_PATH.'app/lib/php/'.$folder.'/')) {
-				$folder = 'common-library';
+				$folder = 'common-library/classes/';
 			}
 
 			$class_name = $class_name_array[1];
 
 		} else {
-			$folder = 'common-library';
+			$folder = 'common-library/classes/';
 			$class_name = $class_name_array[0];
 		}
 

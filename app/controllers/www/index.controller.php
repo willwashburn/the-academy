@@ -19,11 +19,9 @@
 		 */
 		public function index()
 		{
-			$t             = $this->registry->template;
 
-			$t->main_content = $t->fetch('/info/home');
-
-			$this->registry->template->show('public');
+			$this->template->main_content = $this->template->fetch('/info/home');
+			$this->template->show('public');
 
 		}
 	}

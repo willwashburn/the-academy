@@ -60,7 +60,9 @@
 			$this->registry->controller = $this->controller;
 			$this->registry->action     = $this->action;
 
-			$class      = $this->controller . 'Controller';
+			$namespace = __SITE.'SITE';
+
+			$class      = $namespace.'\\'.$this->controller . 'Controller';
 			$controller = new $class($this->registry);
 
 			/*** check if the action is callable ***/
