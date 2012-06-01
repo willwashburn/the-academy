@@ -5,11 +5,11 @@
 	 * @oa  Will
 	 *
 	 */
-	class Router extends baseRouter
+	class router extends baseRouter
 	{
 
-		function __construct($registry)
+		function __construct($registry,$router_config)
 		{
-			parent::__construct($registry);
+			parent::__construct($registry,$router_config);
 		}
 	}

@@ -21,6 +21,6 @@
 
 	$subdomains = array(
 		'www'=> array('', 'www'),
-		'mobile'=> array('m', 'touch')
+		'mobile'=> array('m', 'touch','mobile')
 	);
 

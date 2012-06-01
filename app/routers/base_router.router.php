@@ -16,10 +16,13 @@
 		 * @oa	Will
 		 *
 		 */
-		function __construct($registry)
+		function __construct($registry,$config)
 		{
 			$this->registry      = $registry;
 			$this->registry->uri = \commonlib\uri::get_instance();
+
+
+
 		}
 
 		/*
