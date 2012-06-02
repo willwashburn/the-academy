@@ -8,7 +8,7 @@
 	 */
 
 
-	$registry = new registry;
+	$registry = new \commonlib\registry();
 
 	if (!isset($router_config)) {
 		$router_config = array();

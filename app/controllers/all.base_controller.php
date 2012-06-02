@@ -20,7 +20,7 @@
 		function __construct($registry)
 		{
 			$this->registry = $registry;
-			$this->template = new template($registry,__THIS_VIEW_PATH.'/html/templates/',__THIS_VIEW_PATH.'/html/');
+			$this->template = new \commonlib\template($registry,__THIS_VIEW_PATH.'/html/templates/',__THIS_VIEW_PATH.'/html/');
 		}
 
 		/*
