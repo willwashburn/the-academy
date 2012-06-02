@@ -52,7 +52,6 @@
 		{
 
 			Header("content-type: application/x-javascript");
-
 			$this_javascript_path = __APP_PATH . 'javascripts/' . __SITE . '/';
 			$unpacked_onload_path = $this_javascript_path . 'unpacked.onLoad.js';
 			$packed_onload_path   = $this_javascript_path . 'packed.onLoad.js';

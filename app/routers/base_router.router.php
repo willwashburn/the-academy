@@ -60,7 +60,11 @@
 			$this->registry->controller = $this->controller;
 			$this->registry->action     = $this->action;
 
-			if ($this->use_namespace) { $namespace = __SITE . 'SITE'; } else { $namespace = 'academy'; }
+			if ($this->use_namespace) {
+				$namespace = __SITE . 'SITE';
+			} else {
+				$namespace = 'academy';
+			}
 
 			$class      = $namespace . '\\' . $this->controller . 'Controller';
 			$controller = new $class($this->registry);
@@ -87,27 +91,29 @@
 		{
 			if ($this->registry->uri->fragment(1) === __DYNAMIC_EXTERNAL_URL) {
 
-				$this->controller = 'dynamic_sheets';
-				$this->file = __APP_PATH.'controllers/external_sheet.controller.php';
+				$this->controller    = 'dynamic_sheets';
+				$this->file          = __APP_PATH . 'controllers/external_sheet.controller.php';
 				$this->use_namespace = FALSE;
 
 			} else {
 				if ($this->registry->uri->fragment(1)) {
 					$this->controller = $this->registry->uri->fragment(1);
 				}
-				if ($this->registry->uri->fragment(2)) {
-					$this->action = $this->registry->uri->fragment(2);
-				}
 
 				if (empty($this->controller)) {
 					$this->controller = 'index';
 				}
 
-				if (empty($this->action)) {
-					$this->action = 'index';
-				}
 
 				$this->file = $this->path . '/' . $this->controller . '.controller.php';
+			}
+
+			if ($this->registry->uri->fragment(2)) {
+				$this->action = $this->registry->uri->fragment(2);
+			}
+
+			if (empty($this->action)) {
+				$this->action = 'index';
 			}
 		}
 	}
