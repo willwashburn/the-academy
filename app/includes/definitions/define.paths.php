@@ -32,7 +32,7 @@
 
 		//VIEWS
 		$view_constant = '__' . strtoupper($title) . '_VIEW_PATH';
-		$view_path     = __V_PATH . '/app/views/' . $title . '/';
+		$view_path     = __V_PATH . '/app/views/html/' . $title . '/';
 		define($view_constant, $view_path);
 
 		if ($title === __SITE) {

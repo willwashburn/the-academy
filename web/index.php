@@ -51,4 +51,6 @@
 			break;
 	}
 
+	include __APP_PATH . 'includes/active_record.php';
+
 	include __APP_PATH . '/includes/init.php';
