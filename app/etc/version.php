@@ -11,8 +11,8 @@
      *
      */
 
-	$version['major']     = 1;
-	$version['minor']     = 0;
+	$version['major']     = 0;
+	$version['minor']     = 1;
 	$version['database']  = 001;
 
 	//Wdev Version
