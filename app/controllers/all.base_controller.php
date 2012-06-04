@@ -20,7 +20,19 @@
 		function __construct($registry)
 		{
 			$this->registry = $registry;
-			$this->template = new \commonlib\template($registry,__APP_PATH.'/views/html/templates/',__THIS_VIEW_PATH);
+			$this->template = new \commonlib\template($registry, __APP_PATH . '/views/html/templates/', __THIS_VIEW_PATH);
+
+			$this->template->page_title   = '';
+			$this->template->html_class   = '';
+			$this->template->main_content = 'There is nothing to show!';
+
+			if ($this->registry->controller == $this->registry->action) {
+				$this->template->controller_action = $this->registry->controller;
+			} else {
+				$this->template->controller_action = $this->registry->controller . ' ' . $this->registry->action;
+			}
+
+
 		}
 
 		/*
@@ -42,7 +54,8 @@
 		 * @oa  Will
 		 *
 		 */
-		public function error403($log_error = FALSE) {
+		public function error403($log_error = FALSE)
+		{
 
 			header("HTTP/1.0 403 Forbidden");
 
