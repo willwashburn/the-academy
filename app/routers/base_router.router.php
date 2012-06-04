@@ -50,8 +50,14 @@
 		{
 			$this->get_controller();
 
-			if (is_readable($this->file) == FALSE) {
-				$this->file       = $this->path . '/error.controller.php';
+			if (!is_readable($this->file)) {
+				$this->file = $this->path . '/error.controller.php';
+
+				if (!is_readable($this->file)) {
+					$this->file = __APP_PATH . 'controllers/error.controller.php';
+					$this->use_namespace = FALSE;
+				}
+
 				$this->controller = 'error';
 			}
 

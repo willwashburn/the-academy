@@ -45,6 +45,7 @@
 		public function error404($log_error = FALSE)
 		{
 			header("HTTP/1.0 404 Not Found");
+			echo '404: Page Not Found';
 
 		}
 
@@ -58,6 +59,7 @@
 		{
 
 			header("HTTP/1.0 403 Forbidden");
+			echo 'you are not allowed to see this page. 403 error';
 
 		}
 
