@@ -23,3 +23,7 @@ WWBN    - Wills would be nice
 WTR     - Will to review
 WNH     - Will needs help here
 
+------------------------------------------
+
+
+//WTD - add error logs to /logs in apache config (http://www.thegeekstuff.com/2011/07/apache-virtual-host/)
