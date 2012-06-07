@@ -4,6 +4,8 @@
 	 * @use tells us which controller to load
 	 * @oa  Will
 	 *
+	 * //WBN add namespace to routers
+	 *
 	 */
 	class router extends baseRouter
 	{

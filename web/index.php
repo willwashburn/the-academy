@@ -40,6 +40,8 @@
 		include __APP_PATH . '/routers/default.router.php';
 	}
 
+
+	///WTD move this to it's own include file since it'll be updated often
 	//Settings for each site
 	switch (__SITE) {
 		case 'member':
