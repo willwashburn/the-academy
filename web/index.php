@@ -41,18 +41,7 @@
 		include __APP_PATH . '/routers/default.router.php';
 	}
 
-
-	///WTD move this to it's own include file since it'll be updated often
-	//Settings for each site
-	switch (__SITE) {
-		case 'member':
-		case 'mobile':
-			include __APP_PATH . '/includes/start_session.cross_domain.php';
-			break;
-		default:
-			//no session
-			break;
-	}
+	include __APP_PATH . 'includes/subdomain_options.php';
 
 	include __APP_PATH . 'includes/active_record.php';
 
