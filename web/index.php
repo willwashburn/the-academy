@@ -26,9 +26,10 @@
 
 	///Base Controller
 	include __APP_PATH . 'controllers/all.base_controller.php';
-	include __APP_PATH . 'controllers/default.base_controller.php';
 	if (file_exists(__THIS_CONTROLLER_PATH . 'base_controller.php')) {
 		include __THIS_CONTROLLER_PATH . 'base_controller.php';
+	} else {
+		include __APP_PATH . 'controllers/default.base_controller.php';
 	}
 
 	//Router
