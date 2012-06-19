@@ -1,3 +1,6 @@
+<?php
+/*
+
 "To Do" list
 
 *all codes should be prepended by //
@@ -26,5 +29,6 @@ WNH     - Will needs help here
 ------------------------------------------
 
 
-//WTD - add error logs to /logs in apache config (http://www.thegeekstuff.com/2011/07/apache-virtual-host/)
-//WTD  - why are there two default error controllers? investigate this nonsense
+//WTD   - add error logs to /logs in apache config (http://www.thegeekstuff.com/2011/07/apache-virtual-host/)
+//WTD   - why are there two default error controllers? investigate this nonsense
+//TD    - integrate font awesome
