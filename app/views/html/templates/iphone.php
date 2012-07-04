@@ -71,13 +71,7 @@
 
 <div class="container-fluid">
 
-    <h1>Bootstrap starter template</h1>
-
-    <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML
-        document.</p>
-    <div style="font-size: 24px;">
-        <i class="icon-camera-retro"></i> icon-camera-retro
-    </div>
+    <?= $main_content; ?>
 </div>
 <!-- /container -->
 
