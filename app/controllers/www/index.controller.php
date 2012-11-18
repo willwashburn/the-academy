@@ -20,8 +20,8 @@
 		public function index()
 		{
 
-			$this->template->main_content = $this->template->fetch('/info/home');
-			$this->template->show('public');
+			$this->template->main_content = $this->template->fetch('/info/home.php');
+			$this->template->show('public.php');
 
 		}
 	}

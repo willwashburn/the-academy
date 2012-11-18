@@ -1,9 +1,6 @@
 <?php
 	/*
 	 * Router
-	 * @use tells us which controller to load
-	 * @oa  Will
-	 *
 	 */
 	class baseRouter
 	{
