@@ -9,3 +9,9 @@
 [submodule "app/lib/php/php-activerecord"]
 	path = app/lib/php/php-activerecord
 	url = git@github.com:willwashburn/php-activerecord.git
+[submodule "app/lib/js/common-library"]
+	path = app/lib/js/common-library
+	url = git@bitbucket.org:willigant/common-library-javascript.git
+[submodule "app/lib/php/mustache"]
+	path = app/lib/php/mustache
+	url = git@github.com:willwashburn/mustache.php.git

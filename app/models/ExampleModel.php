@@ -6,7 +6,7 @@
  	 *
 	 */
 
-	class ExampleModel extends ActiveRecord\Model
+	class ExampleModel extends \academy\model
 	{
 
 	/* --------------------------------------------------

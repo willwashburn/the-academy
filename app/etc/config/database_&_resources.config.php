@@ -18,8 +18,3 @@
 		'dev'       => 'x_dev'
 	);
 
-	$resources_paths = array(
-		'production' => '/var/web/resources/current/_shared_resources/',
-		'wdev'       => '/home/will/_shared_resources/',
-		'kdev'       => '/home/khaliq/_shared_resources/'
-	);

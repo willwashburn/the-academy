@@ -58,7 +58,7 @@
 
 			if (file_exists($this_javascript_path)) {
 
-				include_all_files_in_dir(__V_PATH . 'app/javascripts/public/', array('packed.onLoad.js', 'unpacked.onLoad.js'));
+				include_all_files_in_dir(__V_PATH . 'app/javascripts/'.__SITE.'/', array('packed.onLoad.js', 'unpacked.onLoad.js'));
 
 				if (file_exists($packed_onload_path)) {
 					$onLoadScript = file_get_contents($packed_onload_path);
