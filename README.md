@@ -1,7 +1,10 @@
-The Academy Framework
-=====================
+#The Academy PHP Framework
+This framework has become obsolete and is no longer being maintained.
 
-This is the basic framework for most WilliGant applications. It is a derivative of many other MVC frameworks. We probably just should have used Yii or Symfony but we are way to stubborn :)
+The Academy is a PHP MVC framework designed for @ConnectedGreek + @WilliGant
+applications. It was built from a sloppy pile of spaghetti code that became
+unmaintainable. It was glorious for awhile, but as with all code -- it turned
+pretty cringe worthy once I realized how it's really done. 
 
 Requirements
 ---------------------
